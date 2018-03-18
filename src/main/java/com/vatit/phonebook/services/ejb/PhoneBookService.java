@@ -16,6 +16,8 @@ public interface PhoneBookService {
 
 	public void createNew(final PhoneBookDTO phoneBookDTO);
 	
+	public void deletePhoneBook(final long userId);
+	
 	public List<UserDTO> getAllUsers();
 	
 	public PhoneBookDTO findByUserId(final long userId);

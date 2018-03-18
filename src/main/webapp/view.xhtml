@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+	<h:head>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+			integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+			crossorigin="anonymous" />
+		<title>VAT-IT Phonebook</title>
+		<style type="text/css">
+	        .btnWidth {
+	            width: 80px;
+	        }
+		</style>
+	</h:head>
+	
+	<h:body>
+		<h:form class="form-horizontal">
+			<div class="form-group">
+	            <div class="col-sm-4"></div>
+	            <div class="col-sm-4">
+	                <h2>Update Phonebook</h2>
+	            </div>
+	        </div>
+	        <hr/>
+	        <div class="form-group">
+	            <h:outputLabel for="firstName" class="control-label col-sm-4">First Name:</h:outputLabel>
+	            <div class="col-sm-4">
+	                <h:inputText id="firstName" value="#{phoneBook.userForm.givenName}" readonly="true" class="form-control" />
+	            </div>
+	        </div>
+	        
+	        <div class="form-group">
+	            <h:outputLabel for="middleName" class="control-label col-sm-4">Middle Name:</h:outputLabel>
+	            <div class="col-sm-4">
+	                <h:inputText id="middleName" value="#{phoneBook.userForm.middleName}" readonly="true" class="form-control" />
+	            </div>
+	        </div>
+	        
+	        <div class="form-group">
+	            <h:outputLabel for="surname" class="control-label col-sm-4">Surname:</h:outputLabel>
+	            <div class="col-sm-4">
+	                <h:inputText id="surname" value="#{phoneBook.userForm.familyName}" readonly="true" class="form-control" />
+	            </div>
+	        </div>
+	        
+	        <div class="form-group row">
+	            <h:outputLabel for="phoneNumber" class="control-label col-sm-4">Phone Number:</h:outputLabel>
+	            <div class="col-sm-1">
+	            	<h:inputText id="phoneNumberCode" value="#{phoneBook.contactNumberForm.countryCode}" readonly="true" class="form-control" size="4" />
+				</div>
+	            <div class="col-sm-3">
+	                <h:inputText id="phoneNumber" value="#{phoneBook.contactNumberForm.contactNumber}" readonly="true" class="form-control" size="7" />
+	            </div>
+	        </div>
+	        
+	        <div class="form-group">
+	            <h:outputLabel for="email" class="control-label col-sm-4">Email Address:</h:outputLabel>
+	            <div class="col-sm-4">
+	                <h:inputText id="email" value="#{phoneBook.emailAddress}" readonly="true" class="form-control" validatorMessage="Email Address is required" />
+	            </div>
+	        </div>
+	        
+	        <div class="form-group">
+	        	<div class="col-sm-4"></div>
+	            <div class="col-sm-4">
+	            	<div class="col-sm-2">
+	                    <h:link outcome="index" value="Back to the phonebook." class="btn btn-primary" />
+	                </div>
+	            </div>
+	        </div>
+		</h:form>
+		<h:messages />
+		
+		<!-- Latest compiled and minified JavaScript -->
+		<script
+			src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+			integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+			crossorigin="anonymous"></script>
+	</h:body>
+</html>

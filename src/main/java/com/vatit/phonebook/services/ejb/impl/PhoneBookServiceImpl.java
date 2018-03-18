@@ -113,13 +113,19 @@ public class PhoneBookServiceImpl implements PhoneBookService {
 		entityManager.persist(user);
 	}
 
+	@Override
+	public void deletePhoneBook(long userId) {
+		// TODO Auto-generated method stub
+		entityManager.remove(entityManager.getReference(User.class, userId));
+	}
+
 	/* (non-Javadoc)
 	 * @see com.vatit.phonebook.services.ejb.PhoneBookService#getAllUsers()
 	 */
 	@Override
 	public List<UserDTO> getAllUsers() {
 		// TODO Auto-generated method stub
-		List<User> users = entityManager.createQuery("SELECT u FROm User u", User.class).getResultList();
+		List<User> users = entityManager.createQuery("SELECT u FROM User u", User.class).getResultList();
 		if (users == null) {
 			return null;
 		}

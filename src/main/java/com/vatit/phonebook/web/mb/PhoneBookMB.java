@@ -66,6 +66,20 @@ public class PhoneBookMB {
 		
 		return "index";
 	}
+	
+	public String loadView(final long userId) {
+		PhoneBookDTO phoneBook = phoneBookService.findByUserId(userId);
+		userForm = phoneBook.getUser();
+		contactNumberForm = phoneBook.getContactNumbers().get(0);
+		emailAddress = phoneBook.getEmailAddresses().get(0);
+		
+		return "view";
+	}
+	
+	public void deleteUser(final long userId) {
+		phoneBookService.deletePhoneBook(userId);
+		init();
+	}
 
 	/**
 	 * @return the userForm
