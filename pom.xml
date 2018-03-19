@@ -73,7 +73,6 @@
 									<build>
 										<from>jboss/wildfly</from>
 										<assembly>
-											<descriptor>assembly.xml</descriptor>
 											<basedir>/opt/jboss/wildfly/standalone/deployments/</basedir>
 											<user>jboss:jboss:jboss</user>
 										</assembly>
