@@ -65,6 +65,7 @@
 						<artifactId>docker-maven-plugin</artifactId>
 						<version>0.24.0</version>
 						<configuration>
+							<dockerHost>tcp://127.0.0.1:2375</dockerHost>
 							<images>
 								<image>
 									<alias>vatit-phonebook</alias>
