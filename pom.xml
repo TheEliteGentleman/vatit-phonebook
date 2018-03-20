@@ -72,12 +72,18 @@
 									<name>theelitegentleman/vatit-phonebook</name>
 									<build>
 										<from>jboss/wildfly</from>
+										<maintainer>Buhake Sindi (buhake_sindi@yahoo.co.uk)</maintainer>
+										<args>
+											
+										</args>
 										<assembly>
+											<descriptor>assembly.xml</descriptor>
 											<basedir>/opt/jboss/wildfly/standalone/deployments/</basedir>
 											<user>jboss:jboss:jboss</user>
 										</assembly>
 										<ports>
 											<port>8080</port>
+											<port>9990</port>
 										</ports>
 									</build>
 
