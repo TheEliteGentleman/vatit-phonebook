@@ -5,7 +5,7 @@
     <dependencySets>
         <dependencySet>
             <includes>
-                <include>com.vatit.phonebook:vatit-phonebook</include>
+                <include>com.vatit:vatit-phonebook</include>
             </includes>
             <outputDirectory>.</outputDirectory>
             <outputFileNameMapping>vatit-phonebook.war</outputFileNameMapping>
